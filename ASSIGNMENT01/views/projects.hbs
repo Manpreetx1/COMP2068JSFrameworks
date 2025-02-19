@@ -1,24 +1,59 @@
-<div class="container mt-5">
-    <h1 class="text-center mb-4">My Projects</h1>
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h5>Project Name 1</h5>
-                    <p>Brief description of this project. Explain what it does and what technologies were used.</p>
-                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
-                </li>
-                <li class="list-group-item">
-                    <h5>Project Name 2</h5>
-                    <p>Brief description of this project. Explain what it does and what technologies were used.</p>
-                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
-                </li>
-                <li class="list-group-item">
-                    <h5>Project Name 3</h5>
-                    <p>Brief description of this project. Explain what it does and what technologies were used.</p>
-                    <a href="#" class="btn btn-primary btn-sm">View Project</a>
-                </li>
-            </ul>
+<div class="projects-page">
+    <div class="container section fade-in">
+        <h2 class="text-center mb-4">My Projects 🚀</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="/images/project1.webp" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project One</h5>
+                        <p class="card-text">A dynamic web app built with Node.js and Express.</p>
+                        <a href="#project1-desc" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="/images/project2.webp" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Two</h5>
+                        <p class="card-text">A responsive front-end site using React.</p>
+                        <a href="#project2-desc" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="/images/project3.webp" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Three</h5>
+                        <p class="card-text">A database-driven application using MongoDB.</p>
+                        <a href="#project3-desc" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Descriptions -->
+    <div class="container section fade-in">
+        <h2 class="text-center mb-4">Project Details</h2>
+        <div id="project1-desc">
+            <h5>Project One - Dynamic Web App</h5>
+            <p>Built using Node.js and Express, this web application features real-time data processing, user authentication, and API integration. It is designed for high scalability and performance.</p>
+        </div>
+        <div id="project2-desc">
+            <h5>Project Two - Responsive Frontend</h5>
+            <p>A beautifully designed front-end application built with React, offering seamless user experience and modern UI/UX elements. It adapts to different screen sizes for mobile and desktop users.</p>
+        </div>
+        <div id="project3-desc">
+            <h5>Project Three - MongoDB Database App</h5>
+            <p>A powerful database-driven application that utilizes MongoDB for efficient data storage, retrieval, and management. It supports user interactions and dynamic content updates in real-time.</p>
         </div>
     </div>
 </div>

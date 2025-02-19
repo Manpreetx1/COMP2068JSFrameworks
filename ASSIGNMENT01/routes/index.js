@@ -21,4 +21,14 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact Me' });
 });
 
+/* POST contact form */
+router.post('/contact', function(req, res, next) {
+  const { name, email, message } = req.body;
+  
+  console.log(`New contact form submission:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+  
+  // Redirect back to the contact page with a success message
+  res.render('contact', { title: 'Contact Me', success: 'Your message has been sent!' });
+});
+
 module.exports = router;
