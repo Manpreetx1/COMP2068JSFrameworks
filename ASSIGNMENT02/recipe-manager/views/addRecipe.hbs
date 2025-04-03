@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<form action="/recipes/add" method="POST">
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" name="title" required>
+  </div>
+
+  <div>
+    <label for="ingredients">Ingredients:</label>
+    <textarea name="ingredients" required></textarea>
+  </div>
+
+  <div>
+    <label for="instructions">Instructions:</label>
+    <textarea name="instructions" required></textarea>
+  </div>
+
+  <div>
+    <label for="category">Category:</label>
+    <input type="text" name="category" required>
+  </div>
+
+  <button type="submit">Add Recipe</button>
+</form>

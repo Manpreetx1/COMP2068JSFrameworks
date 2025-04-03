@@ -1,0 +1,21 @@
+<h1 class="mb-4 text-center text-primary">All Recipes</h1>
+
+{{#if recipes.length}}
+  <div class="row">
+    {{#each recipes}}
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{this.category}}</h6>
+            <p><strong>Ingredients:</strong> {{this.ingredients}}</p>
+            <p><strong>Instructions:</strong> {{this.instructions}}</p>
+            <p class="text-muted">Posted on: {{this.createdAt}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p class="text-center">No recipes found.</p>
+{{/if}}
