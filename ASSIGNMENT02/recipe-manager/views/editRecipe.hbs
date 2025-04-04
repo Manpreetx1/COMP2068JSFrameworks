@@ -1,0 +1,27 @@
+<h1 class="mb-4 text-center text-warning">{{title}}</h1>
+
+<form action="/recipes/edit/{{recipe._id}}" method="POST" class="container" style="max-width: 600px;">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" name="title" id="title" class="form-control" required value="{{recipe.title}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="ingredients" class="form-label">Ingredients:</label>
+    <textarea name="ingredients" id="ingredients" class="form-control" required>{{recipe.ingredients}}</textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="instructions" class="form-label">Instructions:</label>
+    <textarea name="instructions" id="instructions" class="form-control" required>{{recipe.instructions}}</textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="category" class="form-label">Category:</label>
+    <input type="text" name="category" id="category" class="form-control" required value="{{recipe.category}}">
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-warning">Update Recipe</button>
+  </div>
+</form>
