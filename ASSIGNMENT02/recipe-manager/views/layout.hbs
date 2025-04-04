@@ -8,10 +8,36 @@
   <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
+      <div class="container d-flex justify-content-between">
         <a class="navbar-brand" href="/">Recipe Manager</a>
+
+        <!-- Auth Links -->
+        <div>
+          {{#if user}}
+            <span class="text-light me-3">Welcome, {{user.username}}</span>
+            <a href="/users/logout" class="btn btn-outline-light btn-sm">Logout</a>
+          {{else}}
+            <a href="/users/login" class="btn btn-outline-light btn-sm me-2">Login</a>
+            <a href="/users/register" class="btn btn-outline-light btn-sm">Register</a>
+          {{/if}}
+        </div>
       </div>
     </nav>
+
+    <!-- Flash Messages -->
+    <div class="container mt-3">
+      {{#if success_msg}}
+        <div class="alert alert-success">{{success_msg}}</div>
+      {{/if}}
+
+      {{#if error_msg}}
+        <div class="alert alert-danger">{{error_msg}}</div>
+      {{/if}}
+
+      {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+      {{/if}}
+    </div>
 
     <!-- Main Content -->
     <div class="container mt-4">
