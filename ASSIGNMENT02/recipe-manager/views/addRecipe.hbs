@@ -1,29 +1,37 @@
-<h1 class="mb-4 text-center text-primary">{{title}}</h1>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+    <div class="card p-4 mt-5">
+      <h3 class="text-center text-primary mb-4">Add New Recipe</h3>
 
-<form action="/recipes/add" method="POST" class="container" style="max-width: 600px;">
-  <div class="mb-3">
-    <label for="title" class="form-label">Title:</label>
-    <input type="text" name="title" id="title" class="form-control" required>
+      <form action="/recipes/add" method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label">Recipe Title</label>
+          <input type="text" name="title" id="title" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="category" class="form-label">Category</label>
+          <input type="text" name="category" id="category" class="form-control" placeholder="e.g. Dessert, Lunch" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="ingredients" class="form-label">Ingredients</label>
+          <textarea name="ingredients" id="ingredients" class="form-control" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="instructions" class="form-label">Instructions</label>
+          <textarea name="instructions" id="instructions" class="form-control" rows="4" required></textarea>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-success">Add Recipe</button>
+        </div>
+      </form>
+
+      <div class="text-center mt-3">
+        <a href="/recipes" class="btn btn-outline-secondary btn-sm">← Back to All Recipes</a>
+      </div>
+    </div>
   </div>
-
-  <div class="mb-3">
-    <label for="ingredients" class="form-label">Ingredients:</label>
-    <textarea name="ingredients" id="ingredients" class="form-control" required></textarea>
-  </div>
-
-  <div class="mb-3">
-    <label for="instructions" class="form-label">Instructions:</label>
-    <textarea name="instructions" id="instructions" class="form-control" required></textarea>
-  </div>
-
-  <div class="mb-3">
-    <label for="category" class="form-label">Category:</label>
-    <input type="text" name="category" id="category" class="form-control" required>
-  </div>
-
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary">Add Recipe</button>
-  </div>
-  <a href="/recipes" class="btn btn-secondary mt-3">← Back to Recipes</a>
-
-</form>
+</div>

@@ -1,6 +1,13 @@
-<div class="text-center mt-5">
-  <h1 class="display-4 text-success">Welcome to Recipe Manager</h1>
-  <p class="lead">Your personal space to store and manage your favorite recipes!</p>
-  <a href="/recipes" class="btn btn-primary btn-lg mt-3">View Recipes</a>
-  <a href="/recipes/add" class="btn btn-success btn-lg mt-3">+ Add New Recipe</a>
+<div class="d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 80vh;">
+  <div class="card p-5 shadow-sm">
+    <h1 class="mb-3 text-primary">Welcome to Recipe Manager</h1>
+    <p class="mb-4">Save, manage, and share your favorite recipes with ease.</p>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <a href="/recipes" class="btn btn-primary">View Recipes</a>
+      <a href="/users/login" class="btn btn-outline-secondary">Login</a>
+      <a href="/users/register" class="btn btn-outline-success">Register</a>
+      <a href="/recipes/add" class="btn btn-success">+ Add Recipe</a>
+    </div>
+  </div>
 </div>

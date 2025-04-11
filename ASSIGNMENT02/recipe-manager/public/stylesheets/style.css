@@ -1,15 +1,22 @@
 body {
-  background-color: #fdfdfd;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
   font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  padding-top: 4rem;
 }
 
-.card {
-  border-radius: 1rem;
-  transition: transform 0.2s ease;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.card:hover {
-  transform: scale(1.02);
+.navbar {
+  padding: 0.75rem 1rem;
 }
 
 .navbar-brand {
@@ -20,4 +27,49 @@ body {
 footer {
   font-size: 0.9rem;
   color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 4rem;
+}
+
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+form .form-control {
+  border-radius: 0.5rem;
+}
+
+form .btn {
+  border-radius: 0.5rem;
 }
